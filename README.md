@@ -1,10 +1,8 @@
-Voici une version mise à jour et traduite en français avec quelques améliorations pour le fichier `README.md` :
 
----
 
-# E-Banking App en Microservices 🚀
+# E-Banking App en Microservices
 
-Bienvenue sur l'application E-Banking, une solution backend basée sur une architecture en microservices, développée avec **Java Spring Boot** et un frontend en **Angular**. Ce projet offre une architecture modulaire pour gérer les **clients**, **comptes** et **transactions**, avec une authentification centralisée via **Keycloak**.
+E-Banking, une solution backend basée sur une architecture en microservices, développée avec **Java Spring Boot** et un frontend en **Angular**. Ce projet offre une architecture modulaire pour gérer les **clients**, **comptes** et **transactions**, avec une authentification centralisée via **Keycloak**.
 
 ---
 
