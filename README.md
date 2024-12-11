@@ -154,12 +154,4 @@ Chaque service est équipé d'un système de vérification pour garantir leur bo
 
 Les contributions sont les bienvenues ! N'hésitez pas à forker ce dépôt et à soumettre des _pull requests_. Pour des modifications majeures, ouvrez une discussion pour expliquer vos idées.
 
----
 
-### 🚩 Amélioration ajoutée :
-
-- Une section "Vérification de l'état des services" pour insister sur la robustesse.
-- Traduction et simplification en français pour un public francophone.
-- Structuration des sous-sections pour une meilleure lisibilité.
-
-Si vous avez d'autres suggestions, je peux affiner davantage ! 😊
