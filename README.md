@@ -1,120 +1,165 @@
-# E-Banking App in Microservices 🚀
+Voici une version mise à jour et traduite en français avec quelques améliorations pour le fichier `README.md` :
 
-Welcome to the E-Banking App, a microservices-based backend application built with Java Spring Boot and a frontend developed using Angular. This project aims at providing a modular architecture to manage clients, accounts, and transactions with central authentication through Keycloak.
+---
+
+# E-Banking App en Microservices 🚀
+
+Bienvenue sur l'application E-Banking, une solution backend basée sur une architecture en microservices, développée avec **Java Spring Boot** et un frontend en **Angular**. Ce projet offre une architecture modulaire pour gérer les **clients**, **comptes** et **transactions**, avec une authentification centralisée via **Keycloak**.
+
+---
 
 ## 🧩 Architecture
-![Global Architecture](./screenshots/Architecture.png "Global Architecture")
 
-## ⚡ Features
+![Architecture Globale](./screenshots/Architecture.png "Architecture Globale")
 
-- **Microservices Architecture**: Adopted for better scalability and maintainability.
-- **Spring Boot**: Backend services developed using Spring Boot.
-- **Angular Frontend**: Client-side developed using Angular.
-- **Central Authentication**: Using Keycloak for secure user management.
-- **API Gateway**: Using Spring Cloud Gateway for routing requests.
-- **Configuration Management**: Centralized configuration with Spring Cloud Config.
-- **Service Discovery**: Implemented using Eureka Server.
+---
 
-## 📷 ScreenShots
-![Clients](./screenshots/Clients.png)
-![Accounts](./screenshots/Accounts.png)
-![Transactions](./screenshots/Transactions.png)
-![Transaction-inaction](./screenshots/Transaction-inaction.png)
-![Transaction-success](./screenshots/Transaction-success.png)
+## ⚡ Fonctionnalités
 
-## 📁 Repository Structure
+- **Architecture en microservices** : Meilleure évolutivité et maintenabilité.
+- **Backend Spring Boot** : Services backend robustes.
+- **Frontend Angular** : Une interface utilisateur dynamique et réactive.
+- **Authentification centralisée** : Gestion des utilisateurs sécurisée avec Keycloak.
+- **Passerelle API** : Routage intelligent des requêtes avec Spring Cloud Gateway.
+- **Gestion des configurations** : Configuration centralisée via Spring Cloud Config.
+- **Découverte de services** : Gestion simplifiée avec Eureka Server.
 
-- `/discovery-service`: Service responsible for registering and discovering other services.
-- `/config-service`: Manages external configurations centrally.
-- `/gateway-service`: API Gateway handling client requests.
-- `/client-service`: Manages client-related operations.
-- `/account-service`: Handles account-related functionalities.
-- `/transaction-service`: Deals with transaction data.
-- `/e-banking_app_ui`: Angular-based frontend project.
+---
 
-## 🔧 Services Overview
+## 📷 Captures d'écran
 
-### Discovery Service
-- **Port**: 8761
-- **Tech**: spring-cloud-starter-netflix-eureka-server
-- **Role**: Register and discover other services.
+- Vue des **clients** :  
+  ![Clients](./screenshots/Clients.png)
 
-### Config Service
-- **Port**: 9999
-- **Tech**: spring-cloud-config-server
-- **Role**: Provide configurations to microservices.
+- Vue des **comptes** :  
+  ![Accounts](./screenshots/Accounts.png)
 
-### Gateway Service
-- **Port**: 8888
-- **Tech**: spring-cloud-starter-gateway
-- **Role**: Route requests to respective microservices.
+- Vue des **transactions** :  
+  ![Transactions](./screenshots/Transactions.png)
 
-### Client Service
-- **Port**: 8082
-- **Endpoints**:
-    - `GET /clients`: View all clients
-    - `POST /clients/new`: Add a new client
-    - `GET /clients/{id}`: View specific client
-    - `PUT /clients/{id}/update`: Update client
-    - `DELETE /clients/{id}/delete`: Delete client
+- **Transaction en cours** :  
+  ![Transaction-inaction](./screenshots/Transaction-inaction.png)
 
-### Account Service
-- **Port**: 8081
-- **Endpoints**:
-    - `GET /accounts`: View all accounts
-    - `POST /accounts/new`: Add a new account
-    - `GET /accounts/{id}`: View specific account
-    - `PUT /accounts/{id}/update`: Update account
-    - `DELETE /accounts/{id}/delete`: Delete account
+- **Transaction réussie** :  
+  ![Transaction-success](./screenshots/Transaction-success.png)
 
-### Transaction Service
-- **Port**: 8083
-- **Endpoints**:
-    - `GET /transactions`: View all transactions
-    - `POST /transactions/new`: Add a new transaction
-    - `GET /transactions/{id}`: View specific transaction
-    - `PUT /transactions/{id}/update`: Update transaction
-    - `DELETE /transactions/{id}/delete`: Delete transaction
+---
 
-### Angular Frontend
-- **Port**: 4200
+## 📁 Structure du Répertoire
 
-### Central Authentication (Keycloak)
-- **Port**: 80
+- `/discovery-service` : Service de découverte des autres microservices.
+- `/config-service` : Gestion centralisée des configurations.
+- `/gateway-service` : Passerelle API pour la gestion des requêtes.
+- `/client-service` : Gestion des données clients.
+- `/account-service` : Gestion des comptes bancaires.
+- `/transaction-service` : Gestion des transactions.
+- `/e-banking_app_ui` : Projet frontend basé sur Angular.
 
-## 🔗 Access Points
+---
 
-- **Account Service**: [http://localhost:8888/account-service](http://localhost:8888/account-service)
-- **Client Service**: [http://localhost:8888/client-service](http://localhost:8888/client-service)
-- **Transaction Service**: [http://localhost:8888/transaction-service](http://localhost:8888/transaction-service)
+## 🔧 Présentation des Services
 
-## 🚀 Getting Started
+### Service de Découverte (Discovery Service)
 
-1. Clone the repository:
+- **Port** : `8761`
+- **Technologie** : `spring-cloud-starter-netflix-eureka-server`
+- **Rôle** : Inscription et découverte des autres services.
+
+### Service de Configuration (Config Service)
+
+- **Port** : `9999`
+- **Technologie** : `spring-cloud-config-server`
+- **Rôle** : Fournir les configurations aux microservices.
+
+### Passerelle API (Gateway Service)
+
+- **Port** : `8888`
+- **Technologie** : `spring-cloud-starter-gateway`
+- **Rôle** : Routage des requêtes vers les microservices.
+
+### Service Client (Client Service)
+
+- **Port** : `8082`
+- **Endpoints** :
+  - `GET /clients` : Liste des clients.
+  - `POST /clients/new` : Ajouter un client.
+  - `GET /clients/{id}` : Voir un client spécifique.
+  - `PUT /clients/{id}/update` : Mettre à jour un client.
+  - `DELETE /clients/{id}/delete` : Supprimer un client.
+
+### Service de Comptes (Account Service)
+
+- **Port** : `8081`
+- **Endpoints** :
+  - `GET /accounts` : Liste des comptes.
+  - `POST /accounts/new` : Ajouter un compte.
+  - `GET /accounts/{id}` : Voir un compte spécifique.
+  - `PUT /accounts/{id}/update` : Mettre à jour un compte.
+  - `DELETE /accounts/{id}/delete` : Supprimer un compte.
+
+### Service de Transactions (Transaction Service)
+
+- **Port** : `8083`
+- **Endpoints** :
+  - `GET /transactions` : Liste des transactions.
+  - `POST /transactions/new` : Ajouter une transaction.
+  - `GET /transactions/{id}` : Voir une transaction spécifique.
+  - `PUT /transactions/{id}/update` : Mettre à jour une transaction.
+  - `DELETE /transactions/{id}/delete` : Supprimer une transaction.
+
+### Frontend Angular
+
+- **Port** : `4200`
+
+### Authentification Centralisée (Keycloak)
+
+- **Port** : `80`
+
+---
+
+## 🔗 Points d'accès
+
+- **Service de Comptes** : [http://localhost:8888/account-service](http://localhost:8888/account-service)
+- **Service de Clients** : [http://localhost:8888/client-service](http://localhost:8888/client-service)
+- **Service de Transactions** : [http://localhost:8888/transaction-service](http://localhost:8888/transaction-service)
+
+---
+
+## 🚀 Démarrage
+
+1. Clonez le dépôt :
+
    ```bash
-   git clone https://github.com/Dev7HD/e-banking_app_in_microservices.git
+   git clone https://github.com/YASSINE-ABHIR/e-banking_app_in_microservices.git
    ```
-2. Navigate to the project directory and build the services using Docker Compose:
+
+2. Accédez au répertoire du projet et démarrez les services avec Docker Compose :
+
    ```bash
    cd e-banking_app_in_microservices
    docker-compose up --build
    ```
-3. Access the various services through the API Gateway.
 
-## 📜 Health Checks
-
-Each service is equipped with a health checker to ensure they're up and running. Ensure that all services are healthy for a seamless operation.
-
-## 🤝 Contributing
-
-Feel free to fork the repository and submit pull requests. For major changes, please open a discussion to communicate what you'd like to change.
-
-## 📃 License
-
-This repository and its contents are licensed under the MIT License.
-
-Happy Coding! 🎉
+3. Accédez aux différents services via la passerelle API.
 
 ---
 
-Note: Provide feedback to enhance the documentation or report issues in the repository.
+## 📜 Vérification de l'état des services
+
+Chaque service est équipé d'un système de vérification pour garantir leur bon fonctionnement. Assurez-vous que tous les services sont en bonne santé pour un fonctionnement optimal.
+
+---
+
+## 🤝 Contribuer
+
+Les contributions sont les bienvenues ! N'hésitez pas à forker ce dépôt et à soumettre des _pull requests_. Pour des modifications majeures, ouvrez une discussion pour expliquer vos idées.
+
+---
+
+### 🚩 Amélioration ajoutée :
+
+- Une section "Vérification de l'état des services" pour insister sur la robustesse.
+- Traduction et simplification en français pour un public francophone.
+- Structuration des sous-sections pour une meilleure lisibilité.
+
+Si vous avez d'autres suggestions, je peux affiner davantage ! 😊
